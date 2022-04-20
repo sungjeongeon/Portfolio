@@ -40,8 +40,10 @@ nav#navbar {
 }
 nav#navbar a {
 	text-decoration: none;
-	color: 	white;
+	color: white;
 	padding: 10px;
+	text-shadow: 1px 1px 0px #b7b7b7;
+	font-size: 	18px;
 }
 
 /*toggle switch*/
@@ -110,6 +112,14 @@ input:checked + .slider-round:before {
   	z-index: 0;
 }
 
+section#header .profile h1 {
+	font-family: 'Baloo Tamma 2', cursive;;
+	color:  white;
+  	font-size: 80px;
+  	letter-spacing: 5px;
+  margin-top: -40px;
+  text-shadow: -1px -1px 0px, 3px 3px 0px #f5afb2, 6px 6px 0px #706c6c;
+}
 
 /* 메인페이지 물결효과 */
 section#header {
@@ -277,6 +287,22 @@ section#skill img {
 	height: 100px;
 }
 
+section#archiving .container {
+	display: flex;
+	justify-content: center;
+}
+section#archiving .container > div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 	10px;
+}
+section#archiving .container img {
+	width: 130px;
+	height: 130px;
+}
+
+
 section#projects .box {
 	border-radius: 10px;
 	max-width: 950px;
@@ -326,4 +352,10 @@ section#projects .box:hover {
 }
 .box h2 {
 	padding: 10px;
+}
+
+@media (max-width: 768px) {
+	#header .profile {
+		flex-direction: column;
+	}
 }

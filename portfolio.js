@@ -2,7 +2,6 @@ const cbox = document.getElementById("cbox");
 const slider = document.getElementsByClassName("slider-round")[0];
 const sectionHeader = document.getElementById("header");
 const navbar = document.getElementById("navbar");
-
 /*window.addEventListener('DOMContentLoaded', function() {
     QueryLoader2(document.querySelector("body"), {
         barColor: "transparent",
