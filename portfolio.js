@@ -1,8 +1,9 @@
 const cbox = document.getElementById("cbox");
-const slider = document.getElementsByClassName("slider-round")[0];
 const sectionHeader = document.getElementById("header");
-const navbar = document.getElementById("navbar");
-/*window.addEventListener('DOMContentLoaded', function() {
+const toggleBtn = document.querySelector(".toggleBtn");
+const menu = document.querySelector(".menu");
+
+window.addEventListener('DOMContentLoaded', function() {
     QueryLoader2(document.querySelector("body"), {
         barColor: "transparent",
         backgroundColor: "#fff",
@@ -11,8 +12,7 @@ const navbar = document.getElementById("navbar");
         minimumTime: 1000,
         fadeOutTime: 500
     });
-});*/
-
+});
 
 cbox.addEventListener('click', function() {
     if(cbox.checked) {
@@ -21,6 +21,15 @@ cbox.addEventListener('click', function() {
         sectionHeader.style.background = "linear-gradient(180deg, rgba(18,13,65,1) 0%, rgba(116,118,199,1) 30%, rgba(255,126,109,1) 100%)";
     }
 })
+
+toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle('active');
+    if(menu.classList.contains("active")){
+        toggleBtn.innerHTML = "<i class='fa-solid fa-x'></i>";
+    } else {
+        toggleBtn.innerHTML = "<i class='fa-solid fa-bars'></i>";
+    }
+}); 
 
 const swiper = new Swiper('.swiper', {
   loop: true,

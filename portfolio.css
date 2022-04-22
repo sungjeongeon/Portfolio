@@ -38,12 +38,33 @@ nav#navbar {
 	z-index: 111;
 	position: absolute;
 }
-nav#navbar a {
+nav#navbar .menu a {
 	text-decoration: none;
 	color: white;
 	padding: 10px;
 	text-shadow: 1px 1px 0px #b7b7b7;
 	font-size: 	18px;
+}
+
+nav#navbar ul.menu {
+	display: flex;
+} 
+nav#navbar ul.menu li a {
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size 0.5s;
+  cursor: pointer;
+}
+ 
+nav#navbar ul.menu li a {
+  background-image: linear-gradient(to top,rgb(255,197,199, 0.5)40%, transparent 20%);
+}/*linear-gradient(transparent 60%, #F8CD07 40%);*/
+nav#navbar ul.menu li a:hover{
+  background-size: 100% 100%;
+}
+
+nav#navbar .toggleBtn {
+	display: none;
 }
 
 /*toggle switch*/
@@ -193,10 +214,12 @@ section .wave.wave4{
 	margin: 0 auto;
 }
 
-h1 {
-	text-align: center;
-	font-size: 	50px;
-	padding: 20px;
+h1:not(.profile h1) {
+	display: inline-block;
+    padding: 0 10px 0 10px;
+    font-size: 50px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to top,rgb(255,197,199, 0.5)40%, transparent 20%);
 }
 #header .profile {
 	display: flex;
@@ -272,10 +295,12 @@ ul {
 	list-style: none;
 	margin: 10px;
 }
-
+section {
+	text-align: center; /*h1 가운데정렬*/
+}
 section:not(#header) {
-	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 section#aboutme .container > div, section#skill .container > div{
 	display: flex;
@@ -283,8 +308,7 @@ section#aboutme .container > div, section#skill .container > div{
 }
 
 section#skill img {
-	width: 	100px;
-	height: 100px;
+	max-width: 	100px;
 }
 
 section#archiving .container {
@@ -298,15 +322,13 @@ section#archiving .container > div {
 	padding: 	10px;
 }
 section#archiving .container img {
-	width: 130px;
-	height: 130px;
+	max-width: 130px;
 }
 
 
 section#projects .box {
 	border-radius: 10px;
 	max-width: 950px;
-	height: 500px;
 	margin: 0 auto;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0) 0px 3px 7px -3px;
 	margin-bottom: 	30px;
@@ -314,6 +336,11 @@ section#projects .box {
 	align-items: center;
 	justify-content: center;
 	transition: 0.2s;
+}
+section#projects .box > div:nth-of-type(2){
+    text-align: center;
+    word-break: break-all;
+    flex-basis: 50%;
 }
 section#projects .box:hover {
 	transform: scale(1.01);
@@ -353,9 +380,50 @@ section#projects .box:hover {
 .box h2 {
 	padding: 10px;
 }
+@media (max-width: 1024px) {
 
+}
 @media (max-width: 768px) {
+	nav#navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 20px;
+	}
+	nav#navbar ul.menu {
+		flex-direction: column;
+		align-items: flex-end;
+		width: 100%;
+		padding: 0;
+		display: none;
+	}
+	nav#navbar ul.menu li {
+		padding-bottom: 10px;
+	}
+	nav#navbar ul.menu.active {
+		display: flex;
+	}
+	nav#navbar .toggleBtn {
+		display: block;
+		position: absolute;
+		right: 20px;
+		color: white;
+		font-size: 20px;
+		text-shadow: 1px 1px 0px #b7b7b7;
+	}
+	nav#navbar .toggleBtn i {
+		transition:transform .75s
+	} /* adjust to your needs */
+	
 	#header .profile {
 		flex-direction: column;
+	}
+	section#projects .box {
+		flex-direction: column;
+	}
+	section#skill img {
+		max-width: 	85px;
+	}
+	section#archiving .container img {
+		max-width: 90px;
 	}
 }

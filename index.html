@@ -12,6 +12,7 @@
 		  rel="stylesheet"
 		  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
 		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	</head>
 	<body>
 		<section id="header">
@@ -22,12 +23,15 @@
 					  <span class="slider-round"></span>
 					</label>
 				</div>
-				<div>
-					<a href="#aboutme">About me</a>
-					<a href="#skill">Skills</a>
-					<a href="#archiving">Archiving</a>
-					<a href="#projects">Projects</a>
-				</div>
+				<ul class="menu">
+					<li><a href="#aboutme">About me</a></li>
+					<li><a href="#skill">Skills</a></li>
+					<li><a href="#archiving">Archiving</a></li>
+					<li><a href="#projects">Projects</a></li>
+				</ul>
+				<a href="#" class="toggleBtn">
+					<i class="fa-solid fa-bars"></i>
+				</a>
 			</nav>
 
         	<div class="stars"></div>
@@ -46,7 +50,7 @@
 
     	<section id="aboutme">
     		<div class="container">
-	    		<h1>About me</h1>
+	    		<h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">About me</h1>
 	    		<div>
 	    			<ul>
 	    				<li>
@@ -83,7 +87,7 @@
     	</section>
 
     	<section id="skill">
-    		<h1>Skills</h1>
+    		<h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">Skills</h1>
     		<div class="container">
 	    		<div>
 	    			<img src="img/html.png" alt="html">
@@ -96,7 +100,7 @@
     	</section>
 
     	<section id="archiving">
-    		<h1>Archiving</h1>
+    		<h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">Archiving</h1>
     		<div class="container">
     			<div>
     				<img src="img/github.png" alt="github">
@@ -112,10 +116,9 @@
     	</section>
 
     	<section id="projects">
-    		<h1>Projects</h1>
-
-    		<div class="continer">
-	    		<div class="box"> 
+    		<h1 data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">Projects</h1>
+    		<div class="container">
+	    		<div class="box" data-aos="fade-right" data-aos-once="true"> 
 	    			<div class="swiper">
 					  <div class="swiper-wrapper">
 					    <div class="swiper-slide"><img src="img/swarovski.jpg"></div>
@@ -124,7 +127,7 @@
 					  </div>
 					  <div class="swiper-pagination"></div>
 					</div>
-					<div>
+					<div data-aos-duration="1500" data-aos="fade-right" data-aos-once="true">
 	    				<h2>Swarovski 클론 사이트</h2>
 	    				<ul>
 	    					<li><strong>사용 언어</strong></li>
@@ -136,7 +139,7 @@
 	    				</ul>
 	    			</div>
 	    		</div>
-	    		<div class="box"> 
+	    		<div class="box" data-aos="fade-left"data-aos-once="true"> 
 	    			<div class="swiper">
 					  <div class="swiper-wrapper">
 					    <div class="swiper-slide"><img src="img/starbucks2.jpg"></div>
@@ -144,7 +147,7 @@
 					  </div>
 					  <div class="swiper-pagination"></div>
 					</div>
-					<div>
+					<div data-aos-duration="1500" data-aos="fade-left" data-aos-once="true">
 	    				<h2>Starbucks 클론 사이트</h2>
 	    				<ul>
 	    					<li><strong>사용 언어</strong></li>
@@ -156,7 +159,7 @@
 	    				</ul>
 	    			</div>
 	    		</div>
-	    		<div class="box"> 
+	    		<div class="box" data-aos="fade-right" data-aos-once="true"> 
 	    			<div class="swiper">
 					  <div class="swiper-wrapper">
 					    <div class="swiper-slide"><img src="img/tiffany.jpg"></div>
@@ -165,19 +168,19 @@
 					  </div>
 					  <div class="swiper-pagination"></div>
 					</div>
-					<div>
+					<div data-aos-duration="1500" data-aos="fade-right" data-aos-once="true">
 	    				<h2>Tiffany & Co. 클론 사이트</h2>
 	    				<ul>
 	    					<li><strong>사용 언어</strong></li>
 	    					<li>HTML, CSS, JavaScript</li>
 	    					<li><strong>주요 기능</strong></li>
-	    					<li> </li>
+	    					<li>드롭메뉴바, 슬라이드</li>
 	    					<li><strong>사이트 주소</strong></li>
 	    					<li><a href="https://sje19420.cafe24.com/wwa9/per01/tiffany.html">https://sje19420.cafe24.com/wwa9/per01/tiffany.html</a></li>
 	    				</ul>
 	    			</div>
 	    		</div>
-	    		<div class="box"> 
+	    		<div class="box" data-aos="fade-left" data-aos-once="true"> 
 	    			<div class="swiper">
 					  <div class="swiper-wrapper">
 					    <div class="swiper-slide"><img src="img/airbnb.jpg"></div>
@@ -186,32 +189,52 @@
 					  </div>
 					  <div class="swiper-pagination"></div>
 					</div>
-					<div>
+					<div data-aos-duration="1500" data-aos="fade-left" data-aos-once="true">
 	    				<h2>Airbnb 클론 사이트</h2>
 	    				<ul>
 	    					<li><strong>사용 언어</strong></li>
 	    					<li>HTML, CSS, JavaScript</li>
 	    					<li><strong>주요 기능</strong></li>
-	    					<li>드롭메뉴바, 슬라이드, aos</li>
+	    					<li>토글메뉴, 슬라이드 메뉴</li>
 	    					<li><strong>사이트 주소</strong></li>
 	    					<li><a href="https://sje19420.cafe24.com/wwa9/per01/airbnb.html">https://sje19420.cafe24.com/wwa9/per01/airbnb.html</a></li>
 	    				</ul>
 	    			</div>
 	    		</div>
-	    		<div class="box"> 
+	    		<div class="box" data-aos="fade-right" data-aos-once="true"> 
 	    			<div class="swiper">
 					  <div class="swiper-wrapper">
 					    <div class="swiper-slide"><img src="img/youtube.jpg"></div>
 					  </div>
 					  <div class="swiper-pagination"></div>
 					</div>
-					<div>
+					<div data-aos-duration="1500" data-aos="fade-right" data-aos-once="true">
 	    				<h2>Youtube 클론 사이트</h2>
 	    				<ul>
 	    					<li><strong>사용 언어</strong></li>
-	    					<li>HTML, CSS, Reactdddddddddddddssssssssssssssssssssssss</li>
+	    					<li>HTML, CSS, React</li>
 	    					<li><strong>주요 기능</strong></li>
 	    					<li>드롭메뉴바, 슬라이드, aos</li>
+	    					<li><strong>사이트 주소</strong></li>
+	    					<li><a href="https://sungjeongeon.github.io/react-app/">https://sungjeongeon.github.io/react-app/</a></li>
+	    				</ul>
+	    			</div>
+	    		</div>
+	    		<div class="box" data-aos="fade-left" data-aos-once="true"> 
+	    			<div class="swiper" style="height: 200px">
+					  <div class="swiper-wrapper">
+					    <div class="swiper-slide"><img src="img/momentum.png"></div>
+					    <div class="swiper-slide"><img src="img/momentum2.png"></div>
+					  </div>
+					  <div class="swiper-pagination"></div>
+					</div>
+					<div data-aos-duration="1500" data-aos="fade-left" data-aos-once="true">
+	    				<h2>Momentum 사이트</h2>
+	    				<ul>
+	    					<li><strong>사용 언어</strong></li>
+	    					<li>HTML, CSS, JavaScript</li>
+	    					<li><strong>주요 기능</strong></li>
+	    					<li>날씨/지역API, 로그인, todolist</li>
 	    					<li><strong>사이트 주소</strong></li>
 	    					<li><a href="https://sungjeongeon.github.io/react-app/">https://sungjeongeon.github.io/react-app/</a></li>
 	    				</ul>
@@ -221,7 +244,11 @@
     	</section>
     	<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<script src="https://kit.fontawesome.com/544a3dab5a.js" crossorigin="anonymous"></script>
-		<!--<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/queryloader2@3.2.3/queryloader2.min.js"></script>-->
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/queryloader2@3.2.3/queryloader2.min.js"></script>
     	<script type="text/javascript" src="portfolio.js"></script>
+    	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    	<script>
+		  AOS.init();
+		</script>
     </body>
 </html>
